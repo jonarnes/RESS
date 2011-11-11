@@ -57,7 +57,11 @@ $RESS_capas = array(
         // Set a cookie with the client side capabilities.
         var ccapDate = new Date()
         ccapDate.setFullYear(ccapDate.getFullYear() + 1);
-        d.cookie = 'RESS=' + RESS.ccap.vpw + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
+
+        //set default rid values
+        var extra = "|g1."+ RESS.ccap.vpw + "|g2." + RESS.ccap.vpw * 0.48 + "|g3." + RESS.ccap.vpw * 0.3133;
+
+        d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
 
         //if (console && console.log) console.log('cookie: '+ d.cookie);
     }(window, document));
