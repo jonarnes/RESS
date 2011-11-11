@@ -48,7 +48,7 @@
                     <div class="cf"></div>
                 </div>
                 <ul>
-                    <li>Viewport size: <?php echo $RESS_capas["viewport-width"]."x".$RESS_capas["viewport-height"];?></li>
+                    <li>Viewport size: <?php echo $RESS_capas["viewport-width"]?></li>
                     <li>G1 grid width: <?php echo $RESS_capas["g1-width"];?></li>
                     <li>G2 grid width: <?php echo $RESS_capas["g2-width"];?></li>
                     <li>G3 grid width: <?php echo $RESS_capas["g3-width"];?></li>
@@ -59,8 +59,9 @@
             <h2>Test Images</h2>
             <div class="g3 grid">
                 <h3>G3</h3>
+                <div id="img1-debug"></div>
             	<div class="image">
-                    <img src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                    <img id="img1" src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g3 grid">
@@ -72,7 +73,7 @@
             <div class="g3 grid">
                 <h3>G3</h3>
             	<div class="image">
-                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g3-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                    <img src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g2 grid">
@@ -84,7 +85,7 @@
             <div class="g2 grid">
                 <h3>G2</h3>
             	<div class="image">
-                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g2-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                    <img src="http://whateverweb.com/dd/cimg/gg2/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g1 grid">
