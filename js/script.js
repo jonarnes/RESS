@@ -1,10 +1,13 @@
 /* Author: @andmag
  */
 
-
-RESS.detectSize();
+updateSizes();
 RESS.SSCapabilities();
-RESS.storeSizeOfArea(".g3","g3");
+
+
+if (navigator.cookieEnabled) {
+    $("#cookies-enabled").text("enabled");
+}
 
 if (Modernizr.fontface) {
     $("#fontface-detection").text("supported");
@@ -27,32 +30,14 @@ if (Modernizr.touch) {
 
 
 window.onorientationchange = RESS.detectSize;
+window.onresize = RESS.detectSize;
 
-$(document).ready(function() {
-
-    var sendWidth = 320;
-    if(RESS_Capas && RESS_Capas.RESS_G3W){
-        sendWidth = RESS_Capas.RESS_G3W;
-    }
-
-    $.get("blocks/carousel.php?width="+sendWidth,function(data){
-        $(".slider").append(data);
-
-        $('.slidewrap2').carousel({
-        slider: '.slider',
-        slide: '.slide',
-        /*addNav: true,*/
-        addPagination: true,
-        speed: 300 // ms.
-    });
-    });
-
-
-
-});
-
-
-
+function updateSizes() {
+    RESS.storeSizeOfArea(".g3", "g3");
+    RESS.storeSizeOfArea(".g2", "g2");
+    RESS.storeSizeOfArea(".g1", "g1");
+    RESS.detectSize();
+}
 
 
 

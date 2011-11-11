@@ -4,84 +4,100 @@
 <?php include 'util/RESS.php' ?>
 <div id="container">
     <header>
-        <div class="g3">
-            <h1>RESS</h1>
-            <h5>Responsive Design & Server Side components</h5>
+        <div class="g1">
+            <h1>RESS<span class="hide-small"> - RWD &amp; Server Side Components</span></h1>
             <noscript>
-                <h6>Oh, oh... Javascript is disabled...</h6>
+                <h3>Why you have JavaScript is disabled!? Well we're serving you a site based only server side capabilities then. </h3>
             </noscript>
         </div>
     </header>
     <div id="main" role="main">
         <div class="cf"></div>
         <div id="content">
-            <div class="g2">
+            <h2>Responsive Images</h2>
+            <p>This site uses a RESS approach for serving images in an Responsive Web Design. That means that we
+                combine server and client technologies in order to get perfectly scaled images.</p>
+            <h2>Testing for capabilities</h2>
+            <div class="g3">
                 <div class="feature-header">
                     <img src="images/astronaut.png"/>
-                    <h4>Feature detection</h4>
-                    <h6>Using Modernizr</h6>
+                    <h3>Feature detection</h3>
                     <div class="cf"></div>
                 </div>
                 <ul class="feature-list">
-                    <li>Touch: <span class="feature-value" id="touch-detection">not supported</span></li>
-                    <li>Fontface: <span class="feature-value" id="fontface-detection">not supported</span></li>
-                    <li>Canvas: <span class="feature-value" id="canvas-detection">not supported</span></li>
-                    <li>Borderradius: <span class="feature-value" id="borderradius-detection">not supported</span></li>
-                    <li>CSS transforms: <span class="feature-value" id="csstransforms-detection">not supported</span></li>
-                    <li>CSS transforms 3d: <span class="feature-value" id="csstransforms3d-detection">not supported</span></li>
-                    <li>Screen size: <span class="feature-value" id="screensize-detection">not supported</span></li>
-
+                    <li>Cookies: <span class="feature-value" id="cookies-enabled">disabled</span></li>
+                    <li>Viewport size: <span class="feature-value" id="screensize-detection">not supported</span></li>
                 </ul>
             </div>
-            <div class="g2">
+            <div class="g3">
                 <div class="feature-header">
                     <img src="images/viking.jpg"/>
-                    <h4>Serverside detection</h4>
-                    <h6>Using WURFL cloud service from PHP</h6>
+                    <h3>Serverside detection</h3>
                     <div class="cf"></div>
                 </div>
                 <ul class="feature-list">
-                    <li>Brand and model name: <span class="feature-value"><?php echo MyWurfl::get('brand_name').' '.MyWurfl::get('model_name') ?></span></li>
-                    <li>Pointing method: <span class="feature-value"><?php echo MyWurfl::get('pointing_method') ?></span></li>
-                    <li>Has qwerty keyboard: <span class="feature-value"><?php echo MyWurfl::get('has_qwerty_keyboard') ?></span></li>
-                    <li>Viewport size: <span class="feature-value"><?php echo MyWurfl::get('max_image_width').'x'.MyWurfl::get('max_image_height') ?></span></li>
-                    <li>Screen resolution: <span class="feature-value"><?php echo MyWurfl::get('resolution_width').'x'.MyWurfl::get('resolution_height') ?></span></li>
-                    <li>Supports iFrame: <span class="feature-value"><?php echo MyWurfl::get('xhtml_supports_iframe') ?></span></li>
+                    <li>Detected device: <span class="feature-value"><?php echo MyWurfl::get('brand_name').' '.MyWurfl::get('model_name') ?></span></li>
+                    <li>Detected viewport size: <span class="feature-value"><?php echo MyWurfl::get('max_image_width').'x'.MyWurfl::get('max_image_height') ?></span></li>
+                    <li>Detected resolution width: <span class="feature-value"><?php echo MyWurfl::get('resolution_width').'x'.MyWurfl::get('resolution_height') ?></span></li>
                 </ul>
             </div>
 
             <div class="g3">
-                <h3>Combining FD and SS image size</h3>
-                <p>SS will be used on first load. Then, FD capabilities will be stored in a cookie and used on the next load.</p>
+                <div class="feature-header">
+                    <img src="images/yoda.jpg"/>
+                    <h3>RESS info</h3>
+                    <div class="cf"></div>
+                </div>
                 <ul>
                     <li>Viewport size: <?php echo $RESS_capas["viewport-width"]."x".$RESS_capas["viewport-height"];?></li>
-                    <li>Max carousel area width: <?php echo $RESS_capas["g3-width"];?></li>
+                    <li>G1 grid width: <?php echo $RESS_capas["g1-width"];?></li>
+                    <li>G2 grid width: <?php echo $RESS_capas["g2-width"];?></li>
+                    <li>G3 grid width: <?php echo $RESS_capas["g3-width"];?></li>
                 </ul>
             </div>
-            <div id="carousel" class="g3">
-                <h3>Carousel demo using responsive images</h3>
-            	<div class="slidewrap2">
-                    <ul class="slider">
-                        <li class="slide">
-                            <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g3-width"] ?>&src=http://farm4.static.flickr.com/3340/3270356872_f6fc09d364_b.jpg"/>
-                        </li>
-                    </ul>
-                </div>
-                <small>Photos by <a href="http://www.flickr.com/photos/franciscoantunes/">Fr Antunes</a></small>
-             </div>
+            <div class="cf"></div>
 
-        </div>
-        <div class="g3">
-            <h3>iFrame</h3>
-            <?php if(MyWurfl::get('xhtml_supports_iframe') == "full"){ ?>
-                <div class="fb-like" data-href="localhost:1338" data-send="false" data-layout="box_count" data-width="50" data-show-faces="true"></div>
-            <?php }else{ ?>
-                <div>Sorry, no FaceBook for you my friend.</div>
-            <?php }?>
+            <h2>Test Images</h2>
+            <div class="g3 grid">
+                <h3>G3</h3>
+            	<div class="image">
+                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g3-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                </div>
+             </div>
+            <div class="g3 grid">
+                <h3>G3</h3>
+            	<div class="image">
+                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g3-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                </div>
+             </div>
+            <div class="g3 grid">
+                <h3>G3</h3>
+            	<div class="image">
+                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g3-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                </div>
+             </div>
+            <div class="g2 grid">
+                <h3>G2</h3>
+            	<div class="image">
+                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g2-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                </div>
+             </div>
+            <div class="g2 grid">
+                <h3>G2</h3>
+            	<div class="image">
+                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g2-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                </div>
+             </div>
+            <div class="g1 grid">
+                <h3>G1</h3>
+            	<div class="image">
+                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g1-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                </div>
+             </div>
         </div>
     </div>
     <div class="cf"></div>
-
+<small>Photos <a href="http://www.flickr.com/photos/laszlo-photo/">http://www.flickr.com/photos/laszlo-photo/</a></small>
 
 </div>
 <footer class="">
