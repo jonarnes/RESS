@@ -1,22 +1,32 @@
 RESS = {};
 
-RESS.storeSizeOfArea = function(selector, name) {
 
-    var width = $(selector).css("width");
-    if(width.indexOf("px") > 0){
-        width = width.replace("px","");
+RESS.storeSizes = function(values) {
+    var gridValues = "";
+    for(var name in values){
+        if(name != "undefined"){
+            var width = $(values[name]).css("width").replace("px","");
+            gridValues+= "|" + name + "." + width;
+        }
     }
+    //remove first |
+    gridValues = gridValues.substr(1);
 
+      console.log("GridValues: " + gridValues);
     
-    if($.cookie('RESS_'+name) != width){
-        console.log("New RESS_"+selector+", went from " +$.cookie('RESS_'+name) + " to " + width);
-        $.cookie("RESS_"+name,width , { path: '/', expires: 365 });
-    }
+    var existingWidth = $.cookie('RESS');
+    console.log("existingWidth: " + existingWidth);
+    //Set new cookie with RESS values
+
+    var ccapDate = new Date()
+    ccapDate.setFullYear(ccapDate.getFullYear() + 1);
+    document.cookie = 'RESS='+ existingWidth + "|" + gridValues + '; expires='+ ccapDate.toUTCString() +'; path=/;domain=.whateverweb.com';
 
 }
 
 
-RESS.detectSize = function() {
+
+/*RESS.detectSize = function() {
 
     var width = document.documentElement.clientWidth;
 
@@ -34,7 +44,7 @@ RESS.detectSize = function() {
 
     //set variable for the feature list
     $("#screensize-detection").text(width + 'x' + height);
-}
+}*/
 
 RESS.SSCapabilities = function() {
     if (RESS_Capas) {

@@ -29,14 +29,12 @@ if (Modernizr.touch) {
 }
 
 
-window.onorientationchange = RESS.detectSize;
-window.onresize = RESS.detectSize;
+window.onorientationchange = RESS.updateSizes;
+window.onresize = RESS.updateSizes;
 
 function updateSizes() {
-    RESS.storeSizeOfArea(".g3", "g3");
-    RESS.storeSizeOfArea(".g2", "g2");
-    RESS.storeSizeOfArea(".g1", "g1");
-    RESS.detectSize();
+    RESS.storeSizes({"g1":".g1","g2":".g2","g3":".g3"});
+
 }
 
 

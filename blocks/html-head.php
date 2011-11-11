@@ -6,6 +6,7 @@
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+    <?php include 'util/RESS.php' ?>
   <meta charset="utf-8">
 
   <!-- Use the .htaccess and remove these lines to avoid edge case issues.
@@ -30,7 +31,6 @@
   <link rel="stylesheet" href="css/h5bp-base.css">
   <!--<link rel="stylesheet" href="css/fluid.css">-->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/carousel.css">
   <!-- end CSS-->
 
   <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->

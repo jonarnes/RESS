@@ -1,7 +1,6 @@
 <?php require_once dirname(__FILE__).'/SS/MyWurfl.php'; ?>
 <?php include 'blocks/html-head.php' ?>
 <body>
-<?php include 'util/RESS.php' ?>
 <div id="container">
     <header>
         <div class="g1">
@@ -61,13 +60,13 @@
             <div class="g3 grid">
                 <h3>G3</h3>
             	<div class="image">
-                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g3-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                    <img src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g3 grid">
                 <h3>G3</h3>
             	<div class="image">
-                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g3-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                    <img src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g3 grid">
@@ -79,7 +78,7 @@
             <div class="g2 grid">
                 <h3>G2</h3>
             	<div class="image">
-                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g2-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                    <img src="http://whateverweb.com/dd/cimg/gg2/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g2 grid">
@@ -91,7 +90,7 @@
             <div class="g1 grid">
                 <h3>G1</h3>
             	<div class="image">
-                    <img src="http://imageserver.mobiletech.no/img/?width=<?php echo $RESS_capas["g1-width"] ?>&src=http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
+                    <img src="http://whateverweb.com/dd/cimg/gg1/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
         </div>
