@@ -13,14 +13,11 @@ RESS.storeSizes = function(values) {
     gridValues = gridValues.substr(1);
 
       console.log("GridValues: " + gridValues);
-    
-    var existingWidth = $.cookie('RESS');
-    console.log("existingWidth: " + existingWidth);
     //Set new cookie with RESS values
 
-    var ccapDate = new Date()
+    var ccapDate = new Date();
     ccapDate.setFullYear(ccapDate.getFullYear() + 1);
-    document.cookie = 'RESS='+ existingWidth + "|" + gridValues + '; expires='+ ccapDate.toUTCString() +'; path=/;domain=.whateverweb.com';
+    document.cookie = 'RESS='+ document.documentElement.clientWidth + "|" + gridValues + '; expires='+ ccapDate.toUTCString() +'; path=/;domain=.whateverweb.com';
 
 }
 
