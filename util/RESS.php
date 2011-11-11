@@ -59,7 +59,7 @@ $RESS_capas = array(
         ccapDate.setFullYear(ccapDate.getFullYear() + 1);
 
         //set default rid values
-        var extra = "|g1."+ RESS.ccap.vpw + "|g2." + RESS.ccap.vpw * 0.48 + "|g3." + RESS.ccap.vpw * 0.3133;
+        var extra = "|g1."+ RESS.ccap.vpw + "|g2." + Math.round(RESS.ccap.vpw * 0.48) + "|g3." + Math.round(RESS.ccap.vpw * 0.3133);
 
         d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
 

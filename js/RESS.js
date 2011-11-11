@@ -6,7 +6,7 @@ RESS.storeSizes = function(values) {
     for(var name in values){
         if(name != "undefined"){
             var width = $(values[name]).css("width").replace("px","");
-            gridValues+= "|" + name + "." + width;
+            gridValues+= "|" + name + "." + Math.round(width);
         }
     }
     //remove first |
