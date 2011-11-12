@@ -80,7 +80,11 @@ $RESS_capas = array(
             var vpw = g1;
 
             //body is 78% of maxwidth
-            if(vpw >= 768){g1=Math.round(g1*0.78);}
+            if(vpw >= 768){
+                g1=Math.round(g1*0.78);
+            }else{
+                g1=Math.round(g1*0.92);
+            }
             var g2 = vpw <= 768 ? Math.round(g1 * 0.48) : Math.round(g1 * 0.48);
             var g3 = vpw <= 768 ? Math.round(g1 * 0.48) : (vpw >= 1100 ? Math.round(g1 * 0.331) : Math.round(g1 * 0.48));
 
