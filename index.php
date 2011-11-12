@@ -57,43 +57,48 @@
             <div class="cf"></div>
 
             <h2>Test Images</h2>
-            <div class="g3 grid">
-                <h3>G3</h3>
+            <div class="debug">
+                <h4>1 column debug</h4>
+                <div id="img1-debug"></div>
+                <h4>2 column debug</h4>
+                <div id="img2-debug"></div>
+                <h4>3 column debug</h4>
                 <div id="img3-debug"></div>
+            </div>
+            <div class="g3 grid">
+                <h3>3 column</h3>
             	<div class="image">
                     <img id="img3" src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g3 grid">
-                <h3>G3</h3>
+                <h3>3 column</h3>
             	<div class="image">
                     <img src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g3 grid">
-                <h3>G3</h3>
+                <h3>3 column</h3>
             	<div class="image">
                     <img src="http://whateverweb.com/dd/cimg/gg3/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="cf"></div>
             <div class="g2 grid">
-                <h3>G2</h3>
-                <div id="img2-debug"></div>
+                <h3>2 column</h3>
             	<div class="image">
                     <img id = "img2" src="http://whateverweb.com/dd/cimg/gg2/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="g2 grid">
-                <h3>G2</h3>
+                <h3>2 column</h3>
             	<div class="image">
                     <img src="http://whateverweb.com/dd/cimg/gg2/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
              </div>
             <div class="cf"></div>
             <div class="g1 grid">
-                <h3>G1</h3>
-                <div id="img1-debug"></div>
+                <h3>1 column</h3>
             	<div class="image">
                     <img id="img1" src="http://whateverweb.com/dd/cimg/gg1/http://farm3.static.flickr.com/2648/4093575863_9ba39f1a07_b.jpg"/>
                 </div>
