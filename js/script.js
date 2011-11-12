@@ -57,7 +57,7 @@ function writeImgDebugImg(imgSelector, container)
     var width = newImg.width;
     console.log ('The image size is '+width+'*'+height);
 
-    $(imgSelector + "-debug").html("Real image size: " + width + "x" + height + "<br/>container size: " + $(container).css("width") + " x " + $(".g3 .image").css("height"));
+    $(imgSelector + "-debug").html("Real image size: " + width + "x" + height + "<br/>container size: " + $(container).css("width") + " x " + $(container).css("height"));
 }
 
 function writeImgDebug(){

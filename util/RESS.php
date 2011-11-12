@@ -74,9 +74,12 @@ $RESS_capas = array(
         //set default grid values
         console.log("existing: " + existing);
         if(existing == null){
-            var g1 = RESS.ccap.vpw;
-            var g2 = g1 <= 768 ? g1 * 0.48 : Math.round(g1 * 0.48);
-            var g2 = g1 <= 768 ? g1 * 0.48 : (g1 >= 1100 ? g1 * 0.331 : Math.round(g1 * 0.48));
+            var g1,vpw = RESS.ccap.vpw;
+
+            //body is 78% of maxwidth
+            if(vpw >= 768){g1=g1*0.78;}
+            var g2 = vpw <= 768 ? g1 * 0.48 : Math.round(g1 * 0.48);
+            var g2 = vpw <= 768 ? g1 * 0.48 : (vpw >= 1100 ? g1 * 0.331 : Math.round(g1 * 0.48));
             var extra = "|g1."+ g1 + "|g2." + g2 + "|g3." + Math.round(RESS.ccap.vpw * 0.3133);
             console.log("extra: " + extra);
             d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
