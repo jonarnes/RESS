@@ -75,13 +75,22 @@ $RESS_capas = array(
         console.log("existing: " + existing);
         if(existing == null){
             var g1 = RESS.ccap.vpw;
+            //1%
+            var oneP =  Math.round(g1*0,01);
             var vpw = g1;
 
             //body is 78% of maxwidth
             if(vpw >= 768){g1=Math.round(g1*0.78);}
             var g2 = vpw <= 768 ? Math.round(g1 * 0.48) : Math.round(g1 * 0.48);
             var g2 = vpw <= 768 ? Math.round(g1 * 0.48) : (vpw >= 1100 ? Math.round(g1 * 0.331) : Math.round(g1 * 0.48));
-            var extra = "|g1."+ g1 + "|g2." + g2 + "|g3." + Math.round(RESS.ccap.vpw * 0.3133);
+            var g3 = Math.round(RESS.ccap.vpw * 0.3133);
+
+            //remove 1% padding on each side + 1% padding on each side of the container = 4%
+            g1 = g1 - (oneP*4);
+            g2 = g2 - (oneP*4);
+            g3 = g3 - (oneP*4);
+
+            var extra = "|g1."+ g1 + "|g2." + g2 + "|g3." + g3;
             console.log("extra: " + extra);
             d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
         }
