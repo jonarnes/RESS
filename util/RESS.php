@@ -82,8 +82,7 @@ $RESS_capas = array(
             //body is 78% of maxwidth
             if(vpw >= 768){g1=Math.round(g1*0.78);}
             var g2 = vpw <= 768 ? Math.round(g1 * 0.48) : Math.round(g1 * 0.48);
-            var g2 = vpw <= 768 ? Math.round(g1 * 0.48) : (vpw >= 1100 ? Math.round(g1 * 0.331) : Math.round(g1 * 0.48));
-            var g3 = Math.round(RESS.ccap.vpw * 0.3133);
+            var g3 = vpw <= 768 ? Math.round(g1 * 0.48) : (vpw >= 1100 ? Math.round(g1 * 0.331) : Math.round(g1 * 0.48));
 
             //remove 1% padding on each side + 1% padding on each side of the container = 4%
             g1 = g1 - (oneP*4);
