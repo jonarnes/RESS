@@ -46,6 +46,16 @@ $RESS_capas = array(
     };
 
 
+    function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
     //Set width of screen in a cookie
     (function(w, d) {
         var RESS = w.RESS = w.RESS || {};
@@ -58,11 +68,17 @@ $RESS_capas = array(
         var ccapDate = new Date()
         ccapDate.setFullYear(ccapDate.getFullYear() + 1);
 
-        //set default rid values
-        var extra = "|g1."+ RESS.ccap.vpw + "|g2." + Math.round(RESS.ccap.vpw * 0.48) + "|g3." + Math.round(RESS.ccap.vpw * 0.3133);
-
-        d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
-
+        var existing = readCookie("RESS");
+        //set default grid values
+        console.log("existing: " + existing);
+        if(existing == null){
+            var g1 = RESS.ccap.vpw;
+            var g2 = g1 <= 768 ? g1 * 0.48 : Math.round(g1 * 0.48);
+            var g2 = g1 <= 768 ? g1 * 0.48 : (g1 >= 1100 ? g1 * 0.331 : Math.round(g1 * 0.48));
+            var extra = "|g1."+ g1 + "|g2." + g2 + "|g3." + Math.round(RESS.ccap.vpw * 0.3133);
+            console.log("extra: " + extra);
+            d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
+        }
         //if (console && console.log) console.log('cookie: '+ d.cookie);
     }(window, document));
 </script>
