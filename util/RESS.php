@@ -26,12 +26,14 @@
             var container = g1;
             if(vpw >= 768){
                 container = vpw * 0.7564;
+                g1=Math.round(container*0.9792);
             }else{
                 container = vpw * 0.8730;
+                g1=Math.round(vpw*0.8875);
             }
             console.log("vpw: " + vpw + " container width: " + container);
 
-            g1=Math.round(container*0.9792);
+
 
             
             var g2 = vpw <= 768 ? g1 : Math.round(g1 * 0.48);
