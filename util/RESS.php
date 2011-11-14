@@ -30,16 +30,16 @@
             var vpw = g1;
             var container = g1;
             if(vpw >= 768){
-                container = g1 * 0.78;
-                }else{
-                container = g1 * 0.92;
+                container = vpw * 0.7652;
+            }else{
+                container = vpw * 0.92;
             }
 
-            // g1 is 74% of max width
-            g1=Math.round(container*0.96);
+
+            g1=Math.round(container*0.9792);
 
             
-            var g2 = vpw <= 768 ? g1 : Math.round(g1 * 0.47);
+            var g2 = vpw <= 768 ? g1 : Math.round(g1 * 0.4792);
             var g3 = vpw <= 768 ? g1 : (vpw >= 1100 ? Math.round(g1 * 0.307) : g2);
 
             var extra = "|g1."+ g1 + "|g2." + g2 + "|g3." + g3;
