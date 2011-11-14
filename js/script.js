@@ -30,10 +30,11 @@ if (Modernizr.touch) {
 }
 
 
-window.onorientationchange = RESS.updateSizes;
-window.onresize = RESS.updateSizes;
+window.onorientationchange = RESS.updateSizes();
+window.onresize = RESS.updateSizes();
 
 function updateSizes() {
+
     $("#screensize-detection").text(document.documentElement.clientWidth + "x" + document.documentElement.clientHeight);
     RESS.storeSizes({"g1":".g1","g2":".g2","g3":".g3"});
 
