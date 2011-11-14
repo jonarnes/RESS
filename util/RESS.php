@@ -27,20 +27,20 @@
         console.log("existing: " + existing);
         if(existing == null){
             var g1 = RESS.ccap.vpw;
-
             var vpw = g1;
-
-
+            var container = g1;
             if(vpw >= 768){
-                // g1 is 74% of max width
-                g1=Math.round(g1*0.7493);
-            }else{
-                // g1 is 88% of max width on smaller screens
-                g1=Math.round(g1*0.884);
+                container = g1 * 0.78;
+                }else{
+                container = g1 * 0.92;
             }
+
+            // g1 is 74% of max width
+            g1=Math.round(container*0.96);
+
             
-            var g2 = vpw <= 768 ? g1 : Math.round(g1 * 0.3673);
-            var g3 = vpw <= 768 ? g1 : (vpw >= 1100 ? Math.round(g1 * 0.2397) : g2);
+            var g2 = vpw <= 768 ? g1 : Math.round(g1 * 0.47);
+            var g3 = vpw <= 768 ? g1 : (vpw >= 1100 ? Math.round(g1 * 0.307) : g2);
 
             var extra = "|g1."+ g1 + "|g2." + g2 + "|g3." + g3;
             console.log("extra: " + extra);
