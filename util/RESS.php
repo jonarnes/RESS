@@ -25,7 +25,7 @@
             var g1 = vpw;
             var container = g1;
             if(vpw >= 768){
-                container = vpw * 0.7652;
+                container = vpw * 0.7546;
             }else{
                 container = vpw * 0.92;
             }
