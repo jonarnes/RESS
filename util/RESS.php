@@ -12,22 +12,17 @@
 }
     //Set width of screen in a cookie
     (function(w, d) {
-        var RESS = w.RESS = w.RESS || {};
-        // Client side detected capabilities.
-        // Only the ones needed right away for responsive images and such.
-        RESS.ccap = RESS.ccap || {};
-        if (w.document.documentElement.clientWidth) RESS.ccap.vpw = w.document.documentElement.clientWidth;
 
-        // Set a cookie with the client side capabilities.
-        var ccapDate = new Date()
-        ccapDate.setFullYear(ccapDate.getFullYear() + 1);
+        <!--
+            //set width to vpw
+            var e=d.documentElement,g=d.getElementsByTagName('body')[0],vpw=w.innerWidth||e.clientWidth||g.clientWidth;
+        //-->
 
         var existing = readCookie("RESS");
         //set default grid values
         console.log("existing: " + existing);
         if(existing == null){
-            var g1 = RESS.ccap.vpw;
-            var vpw = g1;
+            var g1 = vpw;
             var container = g1;
             if(vpw >= 768){
                 container = vpw * 0.7652;
@@ -44,6 +39,10 @@
 
             var extra = "|g1."+ g1 + "|g2." + g2 + "|g3." + g3;
             console.log("extra: " + extra);
+
+            // Set a cookie with the client side capabilities.
+            var ccapDate = new Date()
+            ccapDate.setFullYear(ccapDate.getFullYear() + 1);
             d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
         }
         //if (console && console.log) console.log('cookie: '+ d.cookie);
