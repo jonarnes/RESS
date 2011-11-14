@@ -34,7 +34,7 @@
             }else{
                 container = vpw * 0.92;
             }
-
+            console.log("vpw: " + vpw + " container width: " + container);
 
             g1=Math.round(container*0.9792);
 
