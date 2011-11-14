@@ -43,7 +43,7 @@
             // Set a cookie with the client side capabilities.
             var ccapDate = new Date()
             ccapDate.setFullYear(ccapDate.getFullYear() + 1);
-            d.cookie = 'RESS=' + RESS.ccap.vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
+            d.cookie = 'RESS=' + vpw + extra + '; expires=' + ccapDate.toUTCString() + '; path=/;domain=.whateverweb.com';
         }
         //if (console && console.log) console.log('cookie: '+ d.cookie);
     }(window, document));
