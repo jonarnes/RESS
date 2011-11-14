@@ -29,16 +29,17 @@ if (Modernizr.touch) {
     $("#touch-detection").text("supported");
 }
 
-
-window.onorientationchange = RESS.updateSizes();
-window.onresize = RESS.updateSizes();
-
 function updateSizes() {
 
     $("#screensize-detection").text(document.documentElement.clientWidth + "x" + document.documentElement.clientHeight);
     RESS.storeSizes({"g1":".g1","g2":".g2","g3":".g3"});
 
 }
+
+window.onorientationchange = updateSizes();
+window.onresize = updateSizes();
+
+
 
 $(window).load(function () {
     writeImgDebug();
