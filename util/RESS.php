@@ -1,53 +1,5 @@
-<?php
-
-$RESSCookie = $_COOKIE['RESS'];
-if ($RESSCookie) {
-    $RESSValues = explode('|', $RESSCookie);
-    $gridWidths;
-    $i = 0;
-    foreach ($RESSValues as $RESSValue) {
-        if ($i == 0) {
-            $gridWidths["default"] = $RESSValue;
-        } else {
-            $grids = explode('.', $RESSValue);
-            $gridWidths[$grids[0]] = $grids[1];
-        }
-        $i++;
-    }
-}
-
-$wurflWidth = MyWurfl::get('max_image_width');
-if (MyWurfl::get('brand_name') == "generic web browser") {
-    $wurflWidth = 1024;
-}
-
-//set capas, try to get them from cookie first
-$defaultWidth = ($gridWidths["default"] ? $gridWidths["default"] : $wurflWidth);
-
-
-$defaultWidth48 = $defaultWidth * 0.48;
-$defaultWidth31 = $defaultWidth * 0.3133;
-
-global $RESS_capas;
-$RESS_capas = array(
-    "viewport-width" => $defaultWidth,
-    "g3-width" => ($gridWidths["g3"] ? $gridWidths["g3"] : $defaultWidth31),
-    "g2-width" => ($gridWidths["g2"] ? $gridWidths["g2"] : $defaultWidth48),
-    "g1-width" => ($gridWidths["g1"] ? $gridWidths["g1"] : $defaultWidth)
-);
-?>
-
-
 <!--Load capabilities into an global JS variable-->
 <script type="text/javascript">
-    var RESS_Capas = {
-        'RESS_VW':<?php echo $RESS_capas["viewport-width"] ?>,
-        'RESS_G3W':<?php echo $RESS_capas["g3-width"] ?>,
-        'RESS_G2W':<?php echo $RESS_capas["g2-width"] ?>,
-        'RESS_G1W':<?php echo $RESS_capas["g1-width"] ?>
-    };
-
-
     function readCookie(name) {
 	var nameEQ = name + "=";
 	var ca = document.cookie.split(';');
@@ -99,6 +51,53 @@ $RESS_capas = array(
         }
         //if (console && console.log) console.log('cookie: '+ d.cookie);
     }(window, document));
+</script>
+
+    <?php
+
+$RESSCookie = $_COOKIE['RESS'];
+if ($RESSCookie) {
+    $RESSValues = explode('|', $RESSCookie);
+    $gridWidths;
+    $i = 0;
+    foreach ($RESSValues as $RESSValue) {
+        if ($i == 0) {
+            $gridWidths["default"] = $RESSValue;
+        } else {
+            $grids = explode('.', $RESSValue);
+            $gridWidths[$grids[0]] = $grids[1];
+        }
+        $i++;
+    }
+}
+
+$wurflWidth = MyWurfl::get('max_image_width');
+if (MyWurfl::get('brand_name') == "generic web browser") {
+    $wurflWidth = 1440;
+}
+
+//set capas, try to get them from cookie first
+$defaultWidth = ($gridWidths["default"] ? $gridWidths["default"] : $wurflWidth);
+
+
+$defaultWidth48 = $defaultWidth * 0.48;
+$defaultWidth31 = $defaultWidth * 0.3133;
+
+global $RESS_capas;
+$RESS_capas = array(
+    "viewport-width" => $defaultWidth,
+    "g3-width" => ($gridWidths["g3"] ? $gridWidths["g3"] : $defaultWidth31),
+    "g2-width" => ($gridWidths["g2"] ? $gridWidths["g2"] : $defaultWidth48),
+    "g1-width" => ($gridWidths["g1"] ? $gridWidths["g1"] : $defaultWidth)
+);
+?>
+<script type="text/javascript">
+    var RESS_Capas = {
+        'RESS_VW':<?php echo $RESS_capas["viewport-width"] ?>,
+        'RESS_G3W':<?php echo $RESS_capas["g3-width"] ?>,
+        'RESS_G2W':<?php echo $RESS_capas["g2-width"] ?>,
+        'RESS_G1W':<?php echo $RESS_capas["g1-width"] ?>
+    };
 </script>
 
 
