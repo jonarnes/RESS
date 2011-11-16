@@ -36,8 +36,8 @@ function updateSizes() {
 
 }
 
-window.onorientationchange = updateSizes();
-window.onresize = updateSizes();
+window.onorientationchange = updateSizes;
+window.onresize = updateSizes;
 
 
 
