@@ -22,7 +22,9 @@
 
         //set default grid values
         console.log("existing: " + existing);
-        console.log("existingWidth: " + existing.split("|")[0] + " detectedWidth: " + vpw);
+        if(existing != null){
+            console.log("existingWidth: " + existing.split("|")[0] + " detectedWidth: " + vpw);
+        }
         if(existing == null || existing.split("|")[0] != vpw){
             var g1 = vpw;
             var container = g1;
