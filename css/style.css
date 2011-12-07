@@ -17,6 +17,7 @@ body{
 
     margin: 2em auto 0;
     padding: 1%;
+    max-width: 1024px;
 }
 
 .borderradius #container{
@@ -110,9 +111,9 @@ small, p.small {margin: 0; font-size: 0.875em; line-height: 1.714285714285714285
 .cf {zoom:1} /* For IE 6/7 (trigger hasLayout) */
 
 /* column grid */
-.g1,.g2,.g3{display:block; position: relative; margin-left: 1%; margin-right: 1%}
+.g1,.g2,.g3,.g4{display:block; position: relative; margin-left: 1%; margin-right: 1%}
 /* 1 column grid */
-.g1,.g2,.g3{width:98.0%}
+.g1,.g2,.g3,.g4{width:98.0%}
 
 
 
@@ -168,10 +169,11 @@ small, p.small {margin: 0; font-size: 0.875em; line-height: 1.714285714285714285
 	}
 
 	/* COLUMN GRID */
-	.g1,.g2,.g3 {display:inline; float: left}
+	.g1,.g2,.g3,.g4 {display:inline; float: left}
 
 	/* 2 COLUMN GRID */
-	.g3 {width:48.0%}
+    .g4 {width:48.0%}
+    .g3 {width:48.0%}
 	.g2 {width:48.0%}
 	.g1 {width:98.0%}
 }
@@ -183,7 +185,8 @@ small, p.small {margin: 0; font-size: 0.875em; line-height: 1.714285714285714285
 	}
 
 	/* 3 COLUMN GRID */
-	.g3 {width:31.333%}
+    .g4 {width:62%}
+    .g3 {width:31%}
 	.g2 {width:48.0%;}
 	.g1 {width:98.0%;max-width:1024px;}
 
