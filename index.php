@@ -156,7 +156,7 @@
         </div>
     </div>
     <div class="cf"></div>
-    <small>Photos <a href="http://www.flickr.com/photos/laszlo-photo/">http://www.flickr.com/photos/laszlo-photo/</a>
+    <small>Photos <a href="http://www.flickr.com/photos/glenn-in-japan/4346062272/sizes/l/in/photostream/">http://www.flickr.com/photos/glenn-in-japan/4346062272/sizes/l/in/photostream//</a>
     </small>
 
 </div>
