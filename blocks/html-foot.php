@@ -7,23 +7,13 @@
 
 
   <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/libs/jquery.cookie.js"></script>
+
 
   <script src="js/RESS.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/carousel.js"></script>
   <script type="text/javascript" src="http://use.typekit.com/oaq7ijz.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=223776401011840";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
   <!-- end scripts-->
 
