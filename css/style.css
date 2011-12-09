@@ -18,6 +18,7 @@ body{
     margin: 2em auto 0;
     padding: 1%;
     max-width: 1024px;
+    word-wrap: break-word;
 }
 
 .borderradius #container{

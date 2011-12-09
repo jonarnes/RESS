@@ -17,9 +17,41 @@
             <h2>Responsive Images</h2>
 
             <p>This site uses a RESS approach for serving images in an Responsive Web Design. That means that we
-                combine server and client technologies in order to get perfectly scaled images.</p>
+                combine server and client technologies in order to get perfectly scaled images. </p>
 
-            <h2>Testing for capabilities</h2>
+            <p>The site has 3 breakpoints.</p>
+            <ul>
+                <li>Narrow (up to 768px width)</li>
+                <li>medium (up to 1024px)</li>
+                <li>Wide (above 1024px)</li>
+            </ul>
+            <p>
+                We use 2 techniques:
+            </p>
+            <ol>
+                <li>We set a cookie in head that says something about viewport size + the current breakpoint. Example:
+                    Viewport width = 1024 and breakpoint = wide.
+                </li>
+                <li>We have an image server that can scale images based on the size that are set in the cookie and also
+                    have fallback values if cookies or javascript is not available.
+                </li>
+            </ol>
+            <p>
+                Example of the image server URL:<br/>
+                <strong>http://whateverweb.com/img/vpw_1024/bp_w/pc/w_31/m_48/n_98/http://farm3.staticflickr.com/2702/4346062272_8b4a4a18cc_b.jpg</strong>
+            </p>
+            <ul>
+                <li><strong>vpw_1024</strong> = the default width if nothing is set in the cookie</li>
+                <li><strong>bp_w</strong> = the default breakpoint if nothing is set in the cookie</li>
+                <li><strong>w_31</strong> = the image should be 31% of the screen size in the wide breakpoint</li>
+                <li><strong>m_48</strong> = the image should be 48% of the screen size in the medium breakpoint</li>
+                <li><strong>n_98</strong> = the image should be 98% of the screen size in the narrow breakpoint</li>
+            </ul>
+            <p>
+                PS. we have a max of 1024px on this site.
+            </p>
+
+            <!--            <h2>Testing for capabilities</h2>
 
             <div class="g3">
                 <div class="feature-header">
@@ -69,7 +101,7 @@
                     <li>G2 grid width: <?php echo $RESS_capas["g2-width"];?></li>
                     <li>G3 grid width: <?php echo $RESS_capas["g3-width"];?></li>
                 </ul>
-            </div>
+            </div>-->
             <div class="cf"></div>
 
             <h2>Test Images</h2>
