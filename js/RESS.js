@@ -43,7 +43,7 @@ RESS.storeSizes = function(values) {
     $("#screensize-detection").text(width + 'x' + height);
 }*/
 
-RESS.SSCapabilities = function() {
+/*RESS.SSCapabilities = function() {
     if (RESS_Capas) {
 
         //loop through SS capas
@@ -52,4 +52,4 @@ RESS.SSCapabilities = function() {
     }else{
         console.log("No capabilities found");
     }
-}
+}*/

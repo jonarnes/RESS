@@ -3,7 +3,7 @@
 
 updateSizes();
 
-RESS.SSCapabilities();
+//RESS.SSCapabilities();
 
 
 if (navigator.cookieEnabled) {
